@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio2</title>
+</head>
+
+<body>
+    <script>
+        //Utilizando un bucle, mostrar la media y la suma de los número introducidos
+        //hasta introducir un número negativo y ahí mostrar el resultado
+
+        var num;
+        var suma = 0;
+        var media;
+        var can = 0;
+
+        do {
+            num = parseInt(prompt("Ingresa números hasta que ingreses uno negativo", 0));
+        } while (num < 0 || isNaN(num))
+        while (num >= 0) {
+            if (isNaN(num)) {
+                num = 0;
+            } else if (num >= 0) {
+                suma += num;
+                can++;
+                console.log(suma);
+                console.log(can);
+            }
+            num = parseInt(prompt("Ingresa números hasta que ingreses uno negativo", 0));
+
+
+        }
+
+        media = suma / can;
+
+        alert("La media de los números introducidos es: " + media);
+        alert("La suma de los números introducidos es: " + suma);
+
+        ;
+    </script>
+</body>
+
+</html>

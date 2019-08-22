@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plantillas</title>
+</head>
+
+<body>
+    <script>
+        //Plantillas de texto
+
+        var nombre = prompt("Ingrese su nombre");
+        var apellidos = prompt("Ingrese sus apellidos");
+
+        // var texto = "Mi nombre es: " + nombre + <br/> "Mis apellidos son: " + apellidos
+
+        var texto = `
+            <h1>Hola que tal</h1>
+            <h3>Mi nombre es: ${nombre}</h3>
+            <h3>Mis apellidos son: ${apellidos}</h3>
+        
+        `;
+
+        document.write(texto);
+    </script>
+</body>
+
+</html>

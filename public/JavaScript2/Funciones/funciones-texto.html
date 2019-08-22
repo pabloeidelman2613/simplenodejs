@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones Texto</title>
+</head>
+
+<body>
+    <script>
+        //Transformacion de Textos
+        var numero = 444;
+        var texto1 = "Bienvenido al curso de JavaScript";
+        var texto2 = "Es muy buen curso el curso";
+
+        var dato = numero.toString();
+        dato = texto1.toUpperCase();
+        dato = texto1.toLowerCase();
+
+
+        console.log(dato);
+
+        //Calcular longitud
+        var nombre = "Curso JavaScript";
+
+        console.log(nombre.length);
+
+        //Concatenar - Unit textos
+
+        //var textoTotal = texto1 + " " + texto2;
+        var textoTotal = texto1.concat(" " + texto2);
+        console.log(textoTotal);
+
+        //Métodos de búsqueda
+        var busqueda = texto1.indexOf("curso");
+        busqueda = texto2.lastIndexOf("curso");
+        busqueda = texto1.search("JavaScript");
+        busqueda = texto1.match("curso"); //Me devuelve un array con la palabra en la primera posicion
+        busqueda = texto2.substr(12, 5);
+        busqueda = texto1.charAt(26);
+        busqueda = texto1.startsWith("Bien");
+        busqueda = texto1.endsWith("script");
+        busqueda = texto1.includes("JavaScript");
+
+        console.log(busqueda);
+
+
+        //Métodos de reemplazo
+        var texto3 = "  Bienvenido al curso de JavaScript  ";
+        var texto4 = "Es muy buen curso el curso";
+
+        var reemplazo = texto3.replace("JavaScript", "Symphony");
+        reemplazo = texto3.slice(14);
+        reemplazo = texto3.slice(14, 22);
+        reemplazo = texto3.split(" "); //Devuelve un array con todas las palabras separadas
+        reemplazo = texto3.trim();
+
+        console.log(reemplazo);
+    </script>
+</body>
+
+</html>

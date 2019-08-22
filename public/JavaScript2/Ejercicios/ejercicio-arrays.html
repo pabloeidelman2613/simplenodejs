@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Arrays</title>
+</head>
+
+<body>
+    <script>
+        //  1.Pedir 6 numeros por pantalla y meterlos en un array
+        //  2.Mostrar todos sus elementos en el cuerpo de la pagina y por consola
+        //  3.Ordenarlo y mostrarlo
+        //  4.Invertir su orden y mostrarlo
+        //  5.Mostrar cuantos elementos tiene el array
+        //  6.Busqueda de un valor introducido por el usuario, que nos diga si lo encuentra y su indice
+        //  (Se valorará el uso de funciones)
+
+        //1.
+        var numeros = [];
+        var numero;
+        do {
+            numero = parseInt(prompt("Ingrese un numero: "));
+            if (isNaN(numero)) {
+                alert("Numero incorrecto")
+            }
+        } while (isNaN(numero))
+
+        while (numeros.length < 6) {
+            numeros.push(numero);
+            do {
+                numero = parseInt(prompt("Ingrese un numero: "));
+                if (isNaN(numero)) {
+                    alert("Numero incorrecto")
+                }
+            } while (isNaN(numero))
+        }
+
+        //Otra manera
+
+        //var numeros = new Array(6);
+
+        //for(var i = 0; i <= 5 ; i++){
+        //  numeros[i] = parseInt(prompt("Ingrese un numero: "));
+        //}
+
+        //2.
+        document.write("<h1>Numeros en el array</h1>");
+        document.write("<ul>");
+
+        for (let numero in numeros) {
+            document.write("<li>" + numeros[numero] + "</li>")
+        }
+
+        document.write("</ul>");
+
+        console.log(numeros);
+
+        //Otra manera
+        //document.write("<h1>Contenido del array</h1>");
+        //numeros.forEach(element => {
+        //    document.write("<strong>" + element + "</strong> <br/>");
+        //});
+
+        //3.
+        numeros.sort(function(a, b) {
+            return a - b
+        });
+
+        document.write("<h1>Numeros en el array ordenados</h1>");
+        document.write("<ul>");
+
+        for (let numero in numeros) {
+            document.write("<li>" + numeros[numero] + "</li>")
+        }
+
+        document.write("</ul>");
+
+        console.log(numeros);
+
+        //4.
+        numeros.sort(function(a, b) {
+            return b - a
+        });
+
+        document.write("<h1>Numeros en el array en orden descendiente</h1>");
+        document.write("<ul>");
+
+        for (let numero in numeros) {
+            document.write("<li>" + numeros[numero] + "</li>")
+        }
+
+        document.write("</ul>");
+
+        console.log(numeros);
+
+        //5.
+        console.log(numeros.length);
+        document.write("<h1>El array tiene " + numeros.length + " elementos");
+
+        //6.
+        var valor = parseInt(prompt("Ingrese un valor: "));
+
+        var busqueda = numeros.findIndex(numero => numero == valor);
+        if (busqueda != -1) {
+            document.write("<hr/><h1>ENCONTRADO</h1>");
+            document.write("<p>Posicion de la busqueda: " + busqueda + "</p><hr/>")
+        } else {
+            document.write("<hr/><h1>NO ENCONTRADO</h1><hr/>")
+        }
+
+        //Funcion MostrarArray
+
+        function mostrarArray(elementos, textoCustom = "") {
+            document.write("<h1>Contenido del array " + textoCustom + "</h1>");
+            elementos.forEach(element => {
+                document.write("<strong>" + element + "</strong> <br/>");
+            });
+        }
+
+        numeros.sort();
+        mostrarArray(numeros, "ordenado alfabeticamente");
+    </script>
+</body>
+
+</html>

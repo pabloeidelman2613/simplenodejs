@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>Curso JavaScript</h1>
+    <p>Nuestro primer script en JS</p>
+
+    <section id="miseccion">
+        <h1 id="encabezado">Listado de textos de los divs</h1>
+        <hr>
+    </section>
+
+
+    <div id="micaja">Hola soy una caja!</div>
+
+    <div class="amarillo">Soy el primer div!</div>
+    <div class="rojo">Yo el segundo!</div>
+    <div class="rojo">El tercero soy yo!</div>
+    <script>
+        //DOM - Document Object Model
+
+        var caja = document.getElementById("micaja");
+        console.log(caja);
+
+        var caja = document.getElementById("micaja").innerHTML;
+        console.log(caja);
+
+        function cambiaColor(color) {
+            caja.style.background = color;
+        }
+
+        //Conseguir elementos con un ID concreto
+
+        //var caja = document.getElementById("micaja");
+        var caja = document.querySelector("#micaja");
+        caja.innerHTML = "Texto en la caja desde JS";
+        caja.style.background = "red";
+        caja.style.padding = "20px";
+        caja.style.color = "white";
+        caja.className = "hola";
+        console.log(caja.innerHTML);
+
+
+        //Conseguir elementos por su etiqueta
+        var todosLosDivs = document.getElementsByTagName("div");
+        console.log(todosLosDivs);
+
+        var contenidoEnTexto = todosLosDivs[2];
+        console.log(contenidoEnTexto);
+
+        contenidoEnTexto.innerHTML = "Otro texto para el segundo elemento";
+        console.log(contenidoEnTexto.innerHTML);
+
+        var seccion = document.querySelector("#miseccion");
+
+        var valor;
+
+        for (valor in todosLosDivs) {
+            console.log(todosLosDivs[valor]);
+
+            if (typeof todosLosDivs[valor].textContent == "string") {
+                var parrafo = document.createElement("p");
+                var texto = document.createTextNode(todosLosDivs[valor].textContent);
+                parrafo.append(texto);
+                var hr = document.createElement("hr");
+                parrafo.appendChild(hr);
+                seccion.append(parrafo);
+            }
+
+        }
+        //Conseguir elementos por su clase css
+        var divsRojos = document.getElementsByClassName("rojo");
+        var divsAmarillos = document.getElementsByClassName("amarillo");
+        divsAmarillos[0].style.background = "yellow";
+
+        var div;
+        for (div in divsRojos) {
+            if (divsRojos[div].className == "rojo") {
+                divsRojos[div].style.background = "red";
+            }
+
+        }
+
+        console.log(divsRojos);
+
+        //Query Selector
+        var id = document.querySelector("#encabezado");
+        console.log(id);
+
+        var claseRojo = document.querySelector(".rojo");
+        console.log(claseRojo);
+
+        var etiqueta = document.querySelector("div");
+        console.log(etiqueta);
+    </script>
+</body>
+
+</html>

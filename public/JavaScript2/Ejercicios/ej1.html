@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio1</title>
+</head>
+
+<body>
+    <script>
+        //Programa que pida dos numeros y que diga cuál es mayor, cuál es menor y si son iguales
+        //PLUS: Si los numeros no son un numeros o son menores o iguales a cero que los vuelva a pedir
+
+        var num1;
+        var num2;
+
+        do {
+            num1 = prompt("Ingrese número", 0);
+        } while (num1 <= 0 || isNaN(num1))
+
+        do {
+            num2 = prompt("Ingrese otro número", 0);
+        } while (num2 <= 0 || isNaN(num2))
+
+        if (num1 > num2) {
+            alert("El mayor es: " + num1);
+            alert("El menor es: " + num2);
+        } else if (num2 > num1) {
+            alert("El mayor es: " + num2);
+            alert("El menor es: " + num1);
+        } else if (num1 == num2) {
+            alert("Los dos números son iguales");
+        }
+    </script>
+</body>
+
+</html>

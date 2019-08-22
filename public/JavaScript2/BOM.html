@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOM</title>
+</head>
+
+<body>
+    <script>
+        //Browser Object Model
+        function getBom() {
+            console.log(window.innerHeight)
+            console.log(window.innerWidth)
+            console.log(screen.height)
+            console.log(screen.width)
+            console.log(window.location)
+            console.log(window.location.href)
+
+        }
+
+        //getBom()
+
+        function redirect(url) {
+            window.location.href = url
+        }
+
+        function abrirVentana(url) {
+            window.open(url)
+        }
+
+        function abrirVentana2(url) {
+            window.open(url, "", "width=400,height=300")
+        }
+    </script>
+</body>
+
+</html>

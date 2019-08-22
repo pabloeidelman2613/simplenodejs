@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+</head>
+
+<body>
+    <script>
+        function saludo() {
+            document.write("Hola como estas?");
+        }
+
+        saludo();
+
+        function saludo2(nombre) {
+            document.write("Hola " + nombre + "<br>");
+        }
+
+        saludo2("Carlos");
+
+        function suma(numero1, numero2) {
+            var num1 = numero1;
+            var num2 = numero2;
+
+            document.write(num1 + num2 + "<br>");
+        }
+
+        suma(10, 20);
+
+        function suma2(numero1, numero2) {
+            var num1 = numero1;
+            var num2 = numero2;
+
+            return num1 + num2;
+        }
+
+        document.write(suma2(10, 20) + "<br>");
+
+        var suma3 = function suma3(numero1, numero2) {
+            var num1 = numero1;
+            var num2 = numero2;
+
+            return num1 + num2;
+        }
+
+        document.write(suma3(40, 50) + "<br>");
+
+        document.write(suma3(10, 70) + "<br>");
+
+        var numeroMaximo = function(valor1, valor2) {
+            if (valor1 > valor2) {
+                return valor1;
+            } else {
+                return valor2;
+            }
+        }
+
+        document.write("El numero maximo es :" + numeroMaximo(39, 80));
+    </script>
+</body>
+
+</html>

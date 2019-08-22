@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arreglos</title>
+</head>
+
+<body>
+    <script>
+        var amigos = ["Carlos", "Cesar", "Javier", "Manuel"];
+        amigos[0] = "Arturo";
+
+        document.write("Tienes " + amigos.length + " amigos");
+        amigos[amigos.length] = "Fernando";
+        document.write("Tienes " + amigos.length + " amigos");
+
+        amigos.push("Luis", "Oscar");
+
+        amigos.pop();
+
+        var amigos2 = ["Seba", "Mateo", "Jorge"];
+
+        var amigos3 = amigos.concat(amigos2);
+        document.write(amigos3);
+
+        document.write(amigos.join(" : "));
+
+        var ordenados = amigos.sort();
+        document.write(ordenados);
+    </script>
+</body>
+
+</html>

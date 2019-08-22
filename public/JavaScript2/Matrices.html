@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matrices</title>
+</head>
+
+<body>
+    <script>
+        var categorias = ["Terror", "Comedia", "Acción"];
+        var peliculas = ["La vida es bella", "La verdad duele", "Gran Torino"];
+
+        //Ordenar array por orden alfabético
+        peliculas.sort();
+
+        //Darlo vuelta
+        peliculas.reverse();
+
+        console.log(peliculas);
+
+        var cine = [categorias, peliculas];
+
+        console.log(cine);
+
+        console.log(cine[1][2]);
+
+
+        //Agregar y quitar elementos de un Array
+
+        peliculas.push("Batman");
+        console.log(peliculas);
+
+        /*
+        var elemento = "";
+        do {
+            elemento = prompt("Ingrese una pelicula: ");
+            peliculas.push(elemento);
+        } while (elemento != "ACABAR")
+        */
+
+        peliculas.pop();
+
+        var indice = peliculas.indexOf("Gran Torino");
+        console.log(indice);
+
+        if (indice > -1) {
+            peliculas.splice(indice, 1);
+        }
+
+        var peliculas_string = peliculas.join();
+
+        console.log(peliculas_string);
+
+        var cadena = "texto1, texto2, texto3";
+        var cadena_array = cadena.split(", ");
+
+        console.log(cadena_array);
+    </script>
+</body>
+
+</html>

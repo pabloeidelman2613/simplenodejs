@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <script>
+        //Hacer un ejercicio que muestre todos los números entre dos números ingresados por el usuario
+
+        var num1 = 0;
+        var num2;
+
+        do {
+            num1 = parseInt(prompt("Ingrese un número"));
+        } while (num1 <= 0 || isNaN(num1))
+
+        do {
+            num2 = parseInt(prompt("Ingrese otro número(el número debe ser mayor al primero)"));
+        } while (num2 <= 0 || isNaN(num2) || num2 <= num1)
+
+        //Con While
+        document.write("<h1>Con While</h1>");
+        num1++;
+        while (num1 != num2) {
+            document.write((num1) + "<br>");
+            num1++;
+        }
+
+        //Con For               
+        do {
+            num2 = parseInt(prompt("Ingrese otro número(el número debe ser mayor al primero)"));
+        } while (num2 <= 0 || isNaN(num2) || num2 <= num1)
+
+        document.write("<h1>Con For</h1>");
+        document.write("<h1>De " + num1 + " a " + num2 + " están estos números:</h1>");
+
+        for (var i = num1; i <= num2; i++) {
+            document.write(i + "<br>");
+        }
+    </script>
+</body>
+
+</html>
