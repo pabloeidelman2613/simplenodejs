@@ -16,5 +16,8 @@
     "bugs": {
         "url": "https://github.com/pabloeidelman2613/simplenodejs/issues"
     },
-    "homepage": "https://github.com/pabloeidelman2613/simplenodejs#readme"
+    "homepage": "https://github.com/pabloeidelman2613/simplenodejs#readme",
+    "dependencies": {
+        "nodemon": "^1.19.1"
+    }
 }
